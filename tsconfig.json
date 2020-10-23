@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": ["es2018"],
+    "rootDir": "src",
+    "outDir": "lib",
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "composite": true,
+    "types": ["node", "jest"]
+  }
+}
