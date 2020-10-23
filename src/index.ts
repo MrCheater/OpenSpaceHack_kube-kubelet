@@ -18,7 +18,7 @@ GET /api/chat/v1/bot?question=<some question>
 app.get("/api/chat/v1/bot", (req, res) => {
   const { question } = req.query;
 
-  const answer = getAnswer(question);
+  const answer = getAnswer(question.toLowerCase());
 
   res.json({
     answer,

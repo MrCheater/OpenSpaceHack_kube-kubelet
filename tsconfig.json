@@ -16,7 +16,6 @@
     "moduleResolution": "node",
     "removeComments": false,
     "resolveJsonModule": true,
-    "composite": true,
     "types": ["node", "jest"]
   }
 }
