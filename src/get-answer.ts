@@ -1,32 +1,19 @@
-import database from "./database";
-import { replacement, nonRelevantWords, questionBaseForms } from "./cache";
+import { nonRelevantWords, questionBaseForms } from "./cache";
 import { getTextGramInfoAlternatives } from "./utils";
+import getAnswerTextByQuestionIndex from "./get-answer-text-by-question-index";
+import replaceSynonyms from "./replace-synonyms";
 
 const getAnswer = (question: string): string => {
   let answer =
     "Я не могу ответить на ваш вопрос. Попробуйте его переформулировать";
 
-  let text = "    " + question.toUpperCase().replace(/ /, "    ") + "    ";
-
-  for (const [prev, next] of replacement) {
-    for (;;) {
-      const nextText = text.replace(` ${prev} `, ` ${next} `);
-      if (nextText === text) {
-        break;
-      }
-      text = nextText;
-    }
-  }
-
-  text = text.replace(/\s+/gi, " ").trim();
+  let text = replaceSynonyms(question);
 
   const gramInfo = getTextGramInfoAlternatives(text);
 
   const textBaseForms = gramInfo.map((info) =>
     info.map((item) => item.baseForm).filter((word) => word != null)
   );
-
-  console.log({ textBaseForms });
 
   const questionCount = questionBaseForms.length;
   let maxRankIndex = -1;
@@ -52,9 +39,7 @@ const getAnswer = (question: string): string => {
   }
 
   if (maxRankIndex !== -1) {
-    answer = database[maxRankIndex].steps
-      .map((step, index) => `${index + 1}. ${step}`)
-      .join("\n");
+    answer = getAnswerTextByQuestionIndex(maxRankIndex);
   }
 
   return answer;

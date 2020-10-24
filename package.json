@@ -7,7 +7,8 @@
     "start": "node ./lib/index.js",
     "dev": "tsnd --respawn --clear ./src/index.ts",
     "ml": "ts-node ./src/ml.ts",
-    "prettier": "prettier --write \"**/**.{ts,js,json}\""
+    "prettier": "prettier --write \"**/**.{ts,js,json}\"",
+    "test": "jest"
   },
   "dependencies": {
     "phpmorphy": "2.3.2",
@@ -21,6 +22,7 @@
     "ts-node-dev": "1.0.0",
     "typescript": "4.0.3",
     "jest": "26.6.1",
+    "ts-jest": "26.4.2",
     "@types/node": "14.11.8",
     "@types/jest": "26.0.15",
     "axios": "0.21.0",
