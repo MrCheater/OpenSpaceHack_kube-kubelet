@@ -48,4 +48,5 @@ Snapshots:   0 total
 Time:        2.675 s, estimated 3 s
 ```
 ## Ручное тестирование 
-![example](https://user-images.githubusercontent.com/5055654/97077660-2f021f00-15ee-11eb-8b08-d3d6b88f822e.png)
+![WEB](https://user-images.githubusercontent.com/5055654/97077660-2f021f00-15ee-11eb-8b08-d3d6b88f822e.png)
+![CLI](https://user-images.githubusercontent.com/5055654/97078005-560e2000-15f1-11eb-8175-70674798e621.png)
