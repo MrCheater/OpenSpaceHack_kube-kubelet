@@ -11,7 +11,7 @@ type Database = Array<{
   linkFAQ?: string;
   linkSite?: string;
   steps: Array<string>;
-}
+}>
 ``` 
 * Составили базу синонимов для замены слов и словосочетаний в запросах пользователя на слова, знакомые нашему боту
   https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/cache.ts#L1404
