@@ -3,6 +3,9 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 import getAnswer from "./get-answer";
+import { getTextGramInfoAlternatives } from "./utils";
+import database from "./database";
+import { questionWords, questionBaseForms, replacement } from "./cache";
 
 const app = express();
 
@@ -30,3 +33,7 @@ app.listen(3000, () => {
     `Example app listening at http://localhost:3000/api/chat/v1/bot?question=`
   );
 });
+
+console.log(JSON.stringify(questionBaseForms, null, 2));
+
+console.log(JSON.stringify(questionWords, null, 2));
