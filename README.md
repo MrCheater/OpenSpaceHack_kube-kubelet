@@ -12,12 +12,14 @@ type Database = Array<{
   linkSite?: string;
   steps: Array<string>;
 }>
-``` 
-* Составили базу синонимов для замены слов и словосочетаний в запросах пользователя на слова, знакомые нашему боту
-  https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/cache.ts#L1404
+```
+* Составили базу синонимов на основе API https://synonymonline.ru/assets/json/synonyms.json для замены слов и словосочетаний в запросах пользователя на слова, знакомые нашему боту
+  https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/cache.ts#L1404 
+  (код генерации базы синонимов https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/ml.ts#L54)
 * Составили список малозначимых слов https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/cache.ts#L1 , чтобы присваивать им меньший вес
 * Преобразовали вопросы из базы данных в начальную форму для лучшего поиска https://github.com/MrCheater/OpenSpaceHack_kube-kubelet/blob/main/src/cache.ts#L37
 * Написали алгоритм ранжирования результатов поиска с весами, который в наших тестах показывает 84.4% правильных ответов 
+
 
 ## Стек технологий
 Node.js + React
