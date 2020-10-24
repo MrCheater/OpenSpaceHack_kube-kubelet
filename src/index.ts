@@ -33,7 +33,3 @@ app.listen(3000, () => {
     `Example app listening at http://localhost:3000/api/chat/v1/bot?question=`
   );
 });
-
-console.log(JSON.stringify(questionBaseForms, null, 2));
-
-console.log(JSON.stringify(questionWords, null, 2));
