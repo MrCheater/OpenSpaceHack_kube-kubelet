@@ -8,7 +8,10 @@
     "dev": "tsnd --respawn --clear ./src/index.ts",
     "ml": "ts-node ./src/ml.ts",
     "prettier": "prettier --write \"**/**.{ts,js,json}\"",
-    "test": "jest"
+    "test": "jest",
+    "docker:build": "docker build -t open-space-hack-kube-kubelet .",
+    "docker:rm": "docker rm -f open-space-hack-kube-kubelet",
+    "docker:run": "docker run -p 3000:3000 --name open-space-hack-kube-kubelet open-space-hack-kube-kubelet"
   },
   "dependencies": {
     "phpmorphy": "2.3.2",

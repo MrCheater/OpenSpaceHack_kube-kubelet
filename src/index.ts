@@ -3,9 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 import getAnswer from "./get-answer";
-import { getTextGramInfoAlternatives } from "./utils";
-import database from "./database";
-import { questionWords, questionBaseForms, replacement } from "./cache";
 
 const app = express();
 

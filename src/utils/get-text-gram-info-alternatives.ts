@@ -3,8 +3,8 @@ import getWordGramInfoAlternatives from "./get-word-gram-info-alternatives";
 import { WordGramInfo } from "./constants";
 
 const transpose = (matrix) => {
-  const rows = matrix.length;
-  const cols = matrix[0].length;
+  const rows = matrix == null ? 0 : matrix.length;
+  const cols = matrix[0] == null ? 0 : matrix[0].length;
 
   let grid: any = [];
   for (let col = 0; col < cols; col++) {
@@ -27,7 +27,9 @@ const getTextGramInfoAlternatives = (
     .map(getWordGramInfoAlternatives)
     .filter((token) => token != null) as unknown) as Array<Array<WordGramInfo>>;
 
-  const countWordsGramInfo = wordsGramInfo.map((gramInfo) => gramInfo.length);
+  const countWordsGramInfo = wordsGramInfo.map((gramInfo) =>
+    gramInfo == null ? 0 : gramInfo.length
+  );
 
   const countTextsGramInfo = countWordsGramInfo.reduce(
     (acc, val) => acc * val,
