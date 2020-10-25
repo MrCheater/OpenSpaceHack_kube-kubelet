@@ -25,8 +25,8 @@ app.get("/api/chat/v1/bot", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
+app.listen(8080, () => {
   console.log(
-    `Example app listening at http://localhost:3000/api/chat/v1/bot?question=`
+    `Example app listening at http://localhost:8080/api/chat/v1/bot?question=`
   );
 });

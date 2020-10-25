@@ -1,0 +1,10 @@
+.github
+.idea
+.dockerignore
+.gitignore
+Dockerfile
+README.md
+LICENSE
+jest.config.js
+node_modules
+lib

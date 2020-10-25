@@ -1,7 +1,7 @@
 # This stage installs our modules
 FROM mhart/alpine-node:14.14.0
-WORKDIR /app
+
 COPY . .
-RUN npm install
-EXPOSE 3000
+RUN npm install && npm run prepare
+EXPOSE 8080
 CMD ["node", "./lib/index.js"]
