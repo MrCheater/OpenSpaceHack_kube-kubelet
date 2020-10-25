@@ -22,7 +22,7 @@ type Database = Array<{
 * Настроили запуск в Docker-контейнере
 
 ## Стек технологий
-Node.js + React
+Node.js 
 ## Требования к системе
 * Node.js 12+
 ## Установка
